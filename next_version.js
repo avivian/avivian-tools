@@ -3,7 +3,7 @@ const fs = require("fs");
 let package = require("./package.json");
 let current = package.version.split(".");
 let versions = JSON.parse(process.argv[2].trim().replace(/\'/g, '"'));
-
+console.log(`versions: ${versions}`);
 for (let i = 0; i < current.length; i++) {
   current[i] = Number.parseInt(current[i]);
 }
