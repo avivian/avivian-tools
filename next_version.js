@@ -29,5 +29,5 @@ for (let version of versions) {
 
 current[2] = buildNumber;
 package.version = current.join(".");
-
+console.log(`Bumping to ${package.version}`);
 fs.writeFileSync("./package.json", JSON.stringify(package, null, 2));
